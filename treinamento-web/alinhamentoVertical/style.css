@@ -1,0 +1,10 @@
+body{
+  border: 2px solid red;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
