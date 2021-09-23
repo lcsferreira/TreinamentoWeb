@@ -4,8 +4,135 @@
   box-sizing: border-box;
 }
 
+@media(max-width: 860px) {
+  .linha-vertical{
+    height: 100%;
+  }
+  .news{
+    display: flex;
+    flex-direction: column;
+  }
+  .second-news{
+    display: flex;
+    flex-direction: column;
+  }
+  .third-news{
+    display: flex;
+    flex-direction: column;
+  }
+  .caption-other-news{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .other-news-header{
+    margin-top: 20px;
+  }
+}
+
+body{
+  margin: 40px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1{
   max-width: 90px;
   width: 100%;
   border-top: 5px solid red;
+  font-size: 2em;
+}
+.linha-vertical {
+  height: 100%;
+  border-left: 1px solid grey;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main-news{
+  max-width: 520px;
+}
+
+.news{
+  display: flex;
+  height: 500px;
+}
+
+.other-news hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.other-news-header h2{
+  font-size: 0.8em;
+  color: red;
+  text-transform: uppercase;
+}
+
+.other-news-header p{
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.other-news{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1.5;
+  max-width: 600px;
+  max-height: 300px;
+}
+
+.other-news img{
+  width: 60%;
+  height: 60%;
+}
+
+.second-news{
+  display: flex;
+  position: relative;
+}
+
+.third-news{
+  display: flex;
+  position: relative;
+}
+.caption-other-news{
+  margin-left: 15px;
+}
+
+.caption-other-news h2{
+  font-size: 0.8em;
+  color: red;
+  text-transform: uppercase;
+}
+
+.caption-other-news p{
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.main-news .img {
+  position: relative;
+  width: 100%;
+  background-image: url("https://s2.glbimg.com/wD3K-3USXDxZly_H6An0pah77xI=/e.glbimg.com/og/ed/f/original/2020/04/15/borneorainforest_dsc_9267.jpeg");
+  background-size: cover;
+  aspect-ratio: 16/9;
+}
+
+.img img{
+  width: 100%;
+}
+
+.img .caption{
+  position:absolute;
+  bottom: 0;
+  background-color: red;
+  color: white;
+  padding: 2px 5px 2px 5px;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.main-text{
+  font-size: 1.6em;
 }
