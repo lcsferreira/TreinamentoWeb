@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Jogo da Velha</title>
+</head>
+
+<body>
+  <h1>JOGO DA VELHA</h1>
+  <div class="jodo-da-velha" id="jogo">
+    <div class="posicao" id="0" onclick="jogada(0)">
+    </div>
+    <div class="posicao" id="1" onclick="jogada(1)">
+    </div>
+    <div class="posicao" id="2" onclick="jogada(2)">
+    </div>
+    <div class="posicao" id="3" onclick="jogada(3)">
+    </div>
+    <div class="posicao" id="4" onclick="jogada(4)">
+    </div>
+    <div class="posicao" id="5" onclick="jogada(5)">
+    </div>
+    <div class="posicao" id="6" onclick="jogada(6)">
+    </div>
+    <div class="posicao" id="7" onclick="jogada(7)">
+    </div>
+    <div class="posicao" id="8" onclick="jogada(8)">
+    </div>
+  </div>
+  <div class="status" id="status">
+    <p>Vez da rodada: <span></span></p>
+  </div>
+  <div class="buttons">
+    <input type="button" value="INICIAR" onclick="iniciar()"></input>
+    <input type="button" value="LIMPAR" disabled=true onclick="limpar()"></input>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+body{
+  margin: 100px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+.jodo-da-velha{
+  display: none;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  background-color: #222b33;
+  height: 400px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.posicao {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.status {
+  font-size: 40px;
+  display: none;
+}
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons input {
+  height: 100px;
+  width: 200px;
+  font-size:30px;
+  background-color: gray;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.buttons input:hover {
+  background-color: rgb(85, 84, 84);
+  transition: 0.2s;
+}
