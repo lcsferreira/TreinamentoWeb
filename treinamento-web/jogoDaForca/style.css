@@ -1,0 +1,107 @@
+#letra {
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+}
+
+.jogo {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.palavra-adivinhar{
+  font-size: 50px;
+}
+
+
+.inputs{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-add-palavra{
+  margin-top: 100px;
+  font-size: large;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.forca{
+  position: relative;
+}
+
+#cabeca{
+  display: none;
+  position: absolute;
+  left: 28%;
+  top: 13%;
+  height: 50px;
+  width: 50px;
+}
+
+#corpo{
+  display: none;
+  position: absolute;
+  left: 40%;
+  top: 38%;
+  height: 50px;
+  width: 3px;
+}
+#bracoEsq{
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 30%;
+  top: 34%;
+  height: 50px;
+  width: 3px;
+}
+#bracoDir{
+  display: none;
+  position: absolute;
+  transform: rotate(135deg);
+  left: 50%;
+  top: 34%;
+  height: 50px;
+  width: 3px;
+}
+#pernaDir{
+  display: none;
+  position: absolute;
+  transform: rotate(135deg);
+  left: 50%;
+  top: 59%;
+  height: 50px;
+  width: 3px;
+}
+#pernaEsq{
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 30%;
+  top: 59%;
+  height: 50px;
+  width: 3px;
+}
+
+
+input{
+  background-color: gray;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: 2px solid rgb(25, 25, 31)
+}
+
+ul{
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li{
+  list-style: none;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Jogo da Forca</title>
+</head>
+
+<body>
+  <div class="jogo">
+    <div class="palavra-adivinhar">
+      <ul>
+      </ul>
+    </div>
+    <div class="forca">
+      <img src="https://www.soportugues.com.br/secoes/jogos/forca/img/1.gif" alt="forca" id="forca">
+      <img src="https://www.pikpng.com/pngl/m/40-403600_smiley-emoticon-sadness-face-drawing-stick-figure-head.png"
+        alt="cabeca" id="cabeca" class="boneco">
+      <img src="https://s.pngkit.com/png/small/106-1061863_vertical-line-png-vertical-line-svg.png" alt="corpo"
+        id="corpo" class="boneco">
+      <img src="https://s.pngkit.com/png/small/106-1061863_vertical-line-png-vertical-line-svg.png" alt="bracoEsq"
+        id="bracoEsq" class="boneco">
+      <img src="https://s.pngkit.com/png/small/106-1061863_vertical-line-png-vertical-line-svg.png" alt="bracoDir"
+        id="bracoDir" class="boneco">
+      <img src="https://s.pngkit.com/png/small/106-1061863_vertical-line-png-vertical-line-svg.png" alt="pernaDir"
+        id="pernaDir" class="boneco">
+      <img src="https://s.pngkit.com/png/small/106-1061863_vertical-line-png-vertical-line-svg.png" alt="pernaEsq"
+        id="pernaEsq" class="boneco">
+    </div>
+  </div>
+  <div class="inputs">
+    <input type="text" name="letra" id="letra" disabled="true" value="">
+    <input type="submit" value="JOGAR" disabled="true" onclick="jogar()">
+    <input type="button" value="INICIAR" onclick="inicia()">
+  </div>
+  <section class="form-add-palavra">
+    <form>
+      <label for="palavra">Adicionar palavras: </label>
+      <input type="text" name="palavra" id="palavra">
+      <label for="categoria">Categoria: </label>
+      <select name="categoria" id="categoria">
+        <option value="animal">Animal</option>
+        <option value="objeto">Objeto</option>
+        <option value="alimento">Alimento</option>
+      </select>
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
