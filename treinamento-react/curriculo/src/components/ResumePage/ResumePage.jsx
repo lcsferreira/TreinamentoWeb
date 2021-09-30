@@ -11,7 +11,9 @@ import GraduationInfoModel from "../../models/GraduationInfoModel";
 import ProfileInfoModel from "../../models/ProfileInfoModel";
 import ExperienceModel from "../../models/ExperienceModel";
 import ReferenceInfoModel from "../../models/ReferenceInfoModel";
+import HabilityInfoModel from "../../models/HabilityInfoModel";
 import "./ResumePage.css";
+import HabilityList from "../HabilityList";
 
 function ResumePage() {
   const contactInfo = new ContactInfoModel("Bruna Lopez",
@@ -70,36 +72,47 @@ function ResumePage() {
     new ReferenceInfoModel("Matheus Castro", "Casas Bahia", "Gerente", "(11) 98765-4321")
   );
 
+  let habilityinfo = [];
+  habilityinfo.push(
+    new HabilityInfoModel("Photoshop", 7),
+    new HabilityInfoModel("Desenvolvimento web", 9),
+    new HabilityInfoModel("Java Script", 8)
+  )
+
   const person = new PersonModel(
     contactInfo,
     graduationInfo,
     perfilInfo,
     experienceInfo,
-    referenceInfo
+    referenceInfo,
+    habilityinfo
   );
 
   return (
-    <div className="page">
-      <div className="left-side">
-        <Person
-          nome={person.contactInfo.nome}
-          emprego={person.contactInfo.emprego}>
-        </Person>
-        <Contact
-          telefone={person.contactInfo.telefone}
-          site={person.contactInfo.site}
-          email={person.contactInfo.email}
-          endereco={person.contactInfo.endereco}
-          cidade={person.contactInfo.cidade}
-        ></Contact>
-        <GraduationList listaFormacao={person.graduationInfo}></GraduationList>
-        <ReferenceList listaReferencia={person.referenceInfo}></ReferenceList>
-      </div>
-      <div className="right-side">
-        <Profile
-          descricao={person.profileInfo.descricao}>
-        </Profile>
-        <ExperienceList listaExperiencias={person.experienceInfo}></ExperienceList>
+    <div className="container">
+      <div className="page">
+        <div className="left-side">
+          <Person
+            nome={person.contactInfo.nome}
+            emprego={person.contactInfo.emprego}>
+          </Person>
+          <Contact
+            telefone={person.contactInfo.telefone}
+            site={person.contactInfo.site}
+            email={person.contactInfo.email}
+            endereco={person.contactInfo.endereco}
+            cidade={person.contactInfo.cidade}
+          ></Contact>
+          <GraduationList listaFormacao={person.graduationInfo}></GraduationList>
+          <ReferenceList listaReferencia={person.referenceInfo}></ReferenceList>
+        </div>
+        <div className="right-side">
+          <Profile
+            descricao={person.profileInfo.descricao}>
+          </Profile>
+          <ExperienceList listaExperiencias={person.experienceInfo}></ExperienceList>
+          <HabilityList listaHabilidades={person.habilityInfo}></HabilityList>
+        </div>
       </div>
     </div>
   )

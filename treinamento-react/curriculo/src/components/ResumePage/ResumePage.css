@@ -1,6 +1,29 @@
+@media(max-width: 500px){
+  .page{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .page .left-side{
+    min-width: 100%;
+    padding:0;
+  }
+  .page .right-side{
+    min-width: 100%;
+    padding:0;
+  }
+
+}
+
+.container{
+  width: 100%;
+  padding: 0 10px;
+}
+
 .page{
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .left-side{
