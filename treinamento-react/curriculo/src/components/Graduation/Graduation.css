@@ -1,0 +1,14 @@
+
+.graduation-info h3{
+  font-style: italic;
+}
+.graduation-locale{
+  display: flex;
+}
+.graduation-locale .vl{
+  border-left: 3px solid rgb(82, 82, 82);
+  margin-right: 5px;
+}
+.graduation-info span{
+  font-weight: 200;
+}

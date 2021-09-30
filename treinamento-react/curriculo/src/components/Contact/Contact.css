@@ -1,0 +1,15 @@
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 40px;
+  height: 3em;
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+}
+
+.info img{
+  height: 30px;
+  width: 30px;
+}

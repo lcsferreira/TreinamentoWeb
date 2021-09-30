@@ -1,0 +1,23 @@
+.profile{
+  display: flex;
+  flex-direction: column;
+  color: azure;
+  background-color: rgb(82, 82, 82);
+  text-shadow: 4px 3px 4px rgb(26, 26, 26);
+  height: fit-content;
+  min-width:fit-content;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile h1{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.profile h2{
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgb(167, 187, 247);
+}
