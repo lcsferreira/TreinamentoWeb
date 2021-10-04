@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
-import "./PalavraSecretaPage.css"
+import Forca from '../Forca/Forca';
+import "./PalavraSecretaPage.css";
 import usePalavraSecreta from '../../services/usePalavraSecreta';
 
 function PalavraSecretaPage() {
@@ -8,11 +8,6 @@ function PalavraSecretaPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [buttonText, setButtonText] = useState("INICIAR");
   const [novaPalavra, setNovaPalavra] = useState("");
-
-  function inputChangeCallBack(event) {
-    setNovaPalavra(event.target.value);
-  }
-
   const [game, setGame] = useState(
     <div>
       <h1>JOGO DA FORCA</h1>
@@ -29,6 +24,10 @@ function PalavraSecretaPage() {
     </div>
   </div>;
 
+  function inputChangeCallBack(event) {
+    setNovaPalavra(event.target.value);
+  }
+
 
   function showGame() {
     setGame(secretWord);
@@ -38,6 +37,7 @@ function PalavraSecretaPage() {
 
   function iniciaGame() {
     inserirPalavra(novaPalavra);
+    setGame(<Forca></Forca>)
   }
 
   return (

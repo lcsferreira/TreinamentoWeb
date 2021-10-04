@@ -28,7 +28,6 @@ function TabuleiroPage() {
       <div className="game-buttons">
         <button onClick={showTabuleiro} disabled={isPlaying}>INICIAR</button>
         <button onClick={resetaGame} disabled={!isPlaying}>REINICIAR</button>
-
       </div>
     </div>
   )
