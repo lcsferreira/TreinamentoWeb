@@ -6,7 +6,6 @@ import usePalavraSecreta from '../../services/usePalavraSecreta';
 function PalavraSecretaPage() {
   const { palavra, inserirPalavra } = usePalavraSecreta();
   const [isPlaying, setIsPlaying] = useState(false);
-  const [buttonText, setButtonText] = useState("INICIAR");
   const [novaPalavra, setNovaPalavra] = useState("");
   const [game, setGame] = useState(
     <div>
@@ -28,15 +27,21 @@ function PalavraSecretaPage() {
     setNovaPalavra(event.target.value);
   }
 
-
   function showGame() {
     setGame(secretWord);
-    setButtonText("COMEÇAR JOGO")
+    const botaoInicia = document.querySelector('.buttons button')
+    botaoInicia.innerHTML = "COMEÇAR JOGO";
     setIsPlaying(true);
   }
 
   function iniciaGame() {
+    if (novaPalavra === "") {
+      alert("INSIRA UMA PALAVRA")
+      return;
+    }
     inserirPalavra(novaPalavra);
+    const botaoInicia = document.querySelector('.buttons')
+    botaoInicia.style.display = "none";
     setGame(<Forca></Forca>)
   }
 
@@ -44,7 +49,7 @@ function PalavraSecretaPage() {
     <div className="secret-word-menu">
       {game}
       <div className="buttons">
-        <button type="submit" onClick={isPlaying ? iniciaGame : showGame} value={palavra}>{buttonText}</button>
+        <button type="submit" onClick={isPlaying ? iniciaGame : showGame} value={palavra}>INICIAR</button>
       </div>
     </div>
   );

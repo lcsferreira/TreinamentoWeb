@@ -1,3 +1,4 @@
+
 export function palavraSecretaContextBuilder([
   palavra, setPalavra
 ]) {
@@ -9,10 +10,5 @@ export function palavraSecretaContextBuilder([
 }
 
 function inserir(word) {
-  if (word === "") {
-    alert("INSIRA UMA PALAVRA!");
-    return;
-  } else {
-    return word;
-  }
+  return word;
 }

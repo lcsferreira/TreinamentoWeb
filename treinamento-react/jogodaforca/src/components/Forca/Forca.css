@@ -14,3 +14,27 @@
 .hidden-word{
   font-size: 30px;
 }
+
+.game-inputs{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-inputs input{
+  height: 50px;
+  width: 40px;
+  font-size: 40px;
+}
+.game-inputs button{
+  height: 40px;
+  width: fit-content;
+  font-size:18px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.game-inputs button:hover {
+  background-color: rgb(85, 84, 84);
+  transition: 0.2s;
+}
