@@ -38,3 +38,65 @@
   background-color: rgb(85, 84, 84);
   transition: 0.2s;
 }
+/* .game {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+} */
+
+.game .forca{
+    position: relative;
+}
+#cabeca{
+  display: none;
+  position: absolute;
+  left: 28%;
+  top: 13%;
+  height: 50px;
+  width: 50px;
+}
+
+#corpo{
+  display: none;
+  position: absolute;
+  left: 40%;
+  top: 38%;
+  height: 50px;
+  width: 3px;
+}
+#bracoEsq{
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 30%;
+  top: 34%;
+  height: 50px;
+  width: 3px;
+}
+#bracoDir{
+  display: none;
+  position: absolute;
+  transform: rotate(135deg);
+  left: 50%;
+  top: 34%;
+  height: 50px;
+  width: 3px;
+}
+#pernaDir{
+  display: none;
+  position: absolute;
+  transform: rotate(135deg);
+  left: 50%;
+  top: 59%;
+  height: 50px;
+  width: 3px;
+}
+#pernaEsq{
+  display: none;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 30%;
+  top: 59%;
+  height: 50px;
+  width: 3px;
+}
