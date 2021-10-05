@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import "./Forca.css";
-import usePalavraSecreta from '../../services/usePalavraSecreta';
+import usePalavraSecreta from '../../services/PalavraSecreta/usePalavraSecreta';
+import useIsPlaying from "../../services/IsPlaying/useIsPlaying"
+import InserirPalavra from '../InserirPalavra';
 
 function Forca() {
   const { palavra } = usePalavraSecreta();
+  const { iniciarJogo } = useIsPlaying();
   const word = palavra.split("");
   const [caractere, setCaractere] = useState("")
   var [erros, setErros] = useState(6);
@@ -75,7 +78,7 @@ function Forca() {
       lis.forEach(li => { li.style.color = "red" })
       setTimeout(() => {
         alert("DEU FORCA!!");
-        window.location.reload(true);
+        iniciarJogo(<InserirPalavra></InserirPalavra>)
       }, 100)
     } else {
       for (var i = 0; i < lis.length; i++) {
@@ -86,7 +89,7 @@ function Forca() {
       lis.forEach(li => { li.style.color = "green" })
       setTimeout(() => {
         alert("PARABÉNS, VOCÊ SALVOU O STEVE!");
-        window.location.reload(true);
+        iniciarJogo(<InserirPalavra></InserirPalavra>)
       }, 100)
     }
   }

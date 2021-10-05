@@ -4,7 +4,7 @@ export function palavraSecretaContextBuilder([
 ]) {
   return {
     palavra,
-    inserirPalavra: (word) =>
+    addPalavra: (word) =>
       setPalavra(inserir(word)),
   };
 }
@@ -12,3 +12,5 @@ export function palavraSecretaContextBuilder([
 function inserir(word) {
   return word;
 }
+
+
