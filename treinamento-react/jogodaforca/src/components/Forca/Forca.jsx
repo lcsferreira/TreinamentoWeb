@@ -98,6 +98,10 @@ function Forca() {
     setCaractere(event.target.value)
   }
 
+  function restartGame() {
+    iniciarJogo(<InserirPalavra></InserirPalavra>)
+  }
+
   return (
     <div className="game">
       <div className="forca">
@@ -123,8 +127,12 @@ function Forca() {
         </ul>
       </div>
       <div className="game-inputs">
-        <input type="text" valeu="" id="letra" onChange={inputChangeCallBack} />
+        <div>
+          <label htmlFor="letra">LETRA: </label>
+          <input type="text" valeu="" id="letra" onChange={inputChangeCallBack} />
+        </div>
         <button type="submit" onClick={verificaCaractere}>JOGAR</button>
+        <button onClick={restartGame}>REINICIAR</button>
       </div>
     </div>
   );

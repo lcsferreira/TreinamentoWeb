@@ -1,0 +1,21 @@
+.secret-word-input{
+  font-size: 20px;
+}
+.secret-word-input input{
+  height: 21px;
+  width: 200px;
+}
+.buttons button{
+  height: 40px;
+  margin-top: 20px;
+  width: fit-content;
+  font-size:18px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background-color: rgb(85, 84, 84);
+  transition: 0.2s;
+}

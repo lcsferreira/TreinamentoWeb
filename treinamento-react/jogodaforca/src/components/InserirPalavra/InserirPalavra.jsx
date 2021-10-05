@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./InserirPalavra.css";
 import usePalavraSecreta from "../../services/PalavraSecreta/usePalavraSecreta";
 import useIsPlaying from '../../services/IsPlaying/useIsPlaying';
 import Forca from "../Forca/Forca"
@@ -22,7 +23,7 @@ function InserirPalavra() {
   }
 
   return (
-    <div>
+    <div className="secret-word-menu">
       <h1>JOGO DA FORCA</h1>
       <h2>BEM VINDO!</h2>
       <p>Insira uma palavra para ser adivinhada!</p>
