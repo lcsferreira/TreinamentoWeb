@@ -1,10 +1,48 @@
 .menssagem{
   background-color: bisque;
   color: black;
+  width: fit-content;
+  border: 1px solid black;
+  margin: 10px;
+  margin-right: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.conversa{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.conversa span{
+  font-size: 13px;
+  color: gray;
+}
+
+.conversa p, h3 {
+  margin: 0;
 }
 
 .menssagem-voce{
   background-color: bisque;
   color: black;
   text-align: right;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: auto;
+}
+
+.chat{
+  width: 100%;
+  flex:1;
+  overflow: auto;
+}
+.input-bar{
+  display: flex;
+  width: 100%;
+  background-color: white;
 }

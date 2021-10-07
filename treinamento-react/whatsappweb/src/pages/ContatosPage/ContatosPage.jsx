@@ -6,7 +6,7 @@ import ListaContatos from '../../components/ListaContatos';
 
 export default function ContatosPage() {
   return (
-    <div className="container">
+    <div className="contatos">
       <AppBar position="static">
         <Toolbar variant="dense" >
           <Typography variant="h6" color="inherit" component="div">

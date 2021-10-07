@@ -1,0 +1,8 @@
+.contato{
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.contato:hover{
+  background-color: rgb(218, 225, 231)
+}
+

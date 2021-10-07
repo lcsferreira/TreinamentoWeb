@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./ListaContatos.css"
 import { getContatos } from "../../services/whatsAppApiService";
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem';
@@ -19,14 +20,14 @@ export default function ListaContatos() {
   return (
     <List sx={{ mb: 2 }}>
       {listaDeContatos.map(({ id, imagemUrl, nome }) => (
-        <React.Fragment key={id}>
+        <div key={id} className="contato">
           <ListItem component={NavLink} to={"/conversa/" + id}>
             <ListItemAvatar>
               <Avatar alt="Imagem Perfil" src={imagemUrl} />
             </ListItemAvatar>
             <ListItemText primary={nome} secondary="ultima mensagem" />
           </ListItem>
-        </React.Fragment>
+        </div>
       ))}
     </List>
   )

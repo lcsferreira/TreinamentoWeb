@@ -1,13 +1,14 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import ContatosPage from './pages/ContatosPage/ContatosPage';
 import ConversaPage from './pages/ConversaPage';
-import MenuPageTemplate from './pageTemplates/MenuPageTemplate';
+// import MenuPageTemplate from './pageTemplates/MenuPageTemplate';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <MenuPageTemplate></MenuPageTemplate>
+        <ContatosPage></ContatosPage>
         <Switch>
           <Route path="/conversa/:id" exact={true}>
             <ConversaPage />

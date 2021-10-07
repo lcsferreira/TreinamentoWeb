@@ -4,6 +4,7 @@ import "./ConversaPage.css"
 import Conversa from '../../components/Conversa';
 import { getContatoPorId } from "../../services/whatsAppApiService";
 
+
 function ConversaPage() {
   const { id } = useParams();
 
@@ -19,7 +20,7 @@ function ConversaPage() {
     return <div>Carregando...</div>
   } else {
     return (
-      <div className="conversa">
+      <div className="conversa-tela">
         <Conversa contato={contato}></Conversa>
       </div>
     );

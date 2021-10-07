@@ -1,3 +1,7 @@
-.conversa{
-  width: 800px;
+.conversa-tela{
+  display:flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100vh;
 }
+
