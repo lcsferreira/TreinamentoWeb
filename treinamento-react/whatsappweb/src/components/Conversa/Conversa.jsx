@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-import { useParams } from "react-router-dom";
 import "./Conversa.css";
 import { AppBar, Toolbar, Typography } from "@material-ui/core"
 import Avatar from '@material-ui/core/Avatar';
@@ -10,25 +9,23 @@ import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
 import { postMenssagem } from "../../services/whatsAppApiService";
 
-
 export default function Conversa(props) {
-  const { id } = useParams();
   const messageEl = useRef(null);
   const novadata = new Date();
   const [menssagens, setMenssagens] = useState([]);
 
   const [novaMenssagem, setNovaMenssagem] = useState({
-    contatoId: parseInt(id),
+    contatoId: props.contato.id,
     enviadoPeloContato: false,
     conteudo: "",
     datahora: novadata.toISOString(),
   })
 
   useEffect(() => {
-    getMenssagemPorContatoId(id).then((data) => {
+    getMenssagemPorContatoId(props.contato.id).then((data) => {
       setMenssagens(data);
     })
-  }, [id]);
+  }, [props.contato.id]);
 
   useEffect(() => {
     if (messageEl) {
@@ -78,7 +75,7 @@ export default function Conversa(props) {
       <div className="input-bar">
         <TextField
           id="outlined-basic" label="Menssagem" variant="outlined" size="small" fullWidth value={novaMenssagem.conteudo} onChange={(event) => {
-            setNovaMenssagem({ ...novaMenssagem, conteudo: event.target.value });
+            setNovaMenssagem({ ...novaMenssagem, contatoId: props.contato.id, conteudo: event.target.value });
           }}
           onKeyPress={(event) => {
             if (event.key === "Enter") {

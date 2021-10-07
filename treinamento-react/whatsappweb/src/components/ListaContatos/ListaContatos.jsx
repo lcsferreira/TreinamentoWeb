@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./ListaContatos.css"
-import { getContatos } from "../../services/whatsAppApiService";
+import { getContatos, getMensagens } from "../../services/whatsAppApiService";
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom"
 
 export default function ListaContatos() {
   const [listaDeContatos, setListaDeContatos] = useState([]);
+  const [listaMsg, setListaMsg] = useState([]);
 
   useEffect(() => {
     getContatos().then((data) => {
@@ -17,17 +18,31 @@ export default function ListaContatos() {
     })
   }, [])
 
+  useEffect(() => {
+    getMensagens().then((data) => {
+      setListaMsg(data);
+    })
+  });
+
+  function ultimaMensagem(id) {
+    var string = "";
+    for (let i = 0; i < listaMsg.length; i++) {
+      if (listaMsg[i].contatoId === id) {
+        string = listaMsg[i].conteudo;
+      }
+    }
+    return string;
+  }
+
   return (
     <List sx={{ mb: 2 }}>
       {listaDeContatos.map(({ id, imagemUrl, nome }) => (
-        <div key={id} className="contato">
-          <ListItem component={NavLink} to={"/conversa/" + id}>
-            <ListItemAvatar>
-              <Avatar alt="Imagem Perfil" src={imagemUrl} />
-            </ListItemAvatar>
-            <ListItemText primary={nome} secondary="ultima mensagem" />
-          </ListItem>
-        </div>
+        <ListItem key={id} component={NavLink} to={"/conversa/" + id}>
+          <ListItemAvatar>
+            <Avatar alt="Imagem Perfil" src={imagemUrl} />
+          </ListItemAvatar>
+          <ListItemText primary={nome} secondary={ultimaMensagem(id)} />
+        </ListItem>
       ))}
     </List>
   )

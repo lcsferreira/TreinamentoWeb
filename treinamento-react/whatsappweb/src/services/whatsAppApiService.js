@@ -23,6 +23,12 @@ export function getContatoPorId(id) {
   })
 }
 
+export function getMensagens() {
+  return axios.get(urlApiMenssagem).then((AxiosResponse) => {
+    return AxiosResponse.data;
+  })
+}
+
 export function postMenssagem(novaMenssagem) {
   const menssagem = {
     contatoId: novaMenssagem.contatoId,
