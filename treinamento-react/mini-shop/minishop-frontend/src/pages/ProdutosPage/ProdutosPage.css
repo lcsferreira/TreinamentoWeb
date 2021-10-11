@@ -1,0 +1,10 @@
+.listaProdutos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listaProdutos__produtoCard{
+  margin: 5px;
+}

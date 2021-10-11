@@ -1,0 +1,40 @@
+.produtoCard {
+  width: 400px;
+  height: 155px;
+  border: 0.02em solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 14px 16px -7px rgba(0,0,0,0.16);
+
+  ;
+}
+
+.produtoCard .main-info{
+  text-align: center;
+}
+
+.produtoCard .linhaPrincipal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: rgb(187, 168, 140);
+}
+
+.produtoCard .esgotado{
+  color: red;
+}
+
+.produtoCard .estoque{
+  color: green;
+}
+.produtoCard h4{
+  font-weight: bold;
+}
+
+.header{
+  text-align: center;
+  background-color:rgb(127, 182, 255);
+}
