@@ -1,3 +1,20 @@
 .fornecedorCard{
-  border: 1px solid black
+  margin: 10px;
+  width: 500px;
+}
+
+.fornecedorCard .listaProdutos{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.fornecedorCard .expansao{
+  background-color: rgb(187, 168, 140);
+}
+
+.fornecedorCard .header{
+  background-color:rgb(127, 182, 255);
 }

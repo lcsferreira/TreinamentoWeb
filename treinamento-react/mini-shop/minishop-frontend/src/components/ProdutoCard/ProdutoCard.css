@@ -1,25 +1,19 @@
 .produtoCard {
-  width: 400px;
-  height: 155px;
-  border: 0.02em solid black;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0px 14px 16px -7px rgba(0,0,0,0.16);
-
-  ;
+  width: 390px;
 }
 
 .produtoCard .main-info{
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 90px;
+  justify-content: center;
 }
 
 .produtoCard .linhaPrincipal{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   background-color: rgb(187, 168, 140);
 }
 
@@ -30,11 +24,9 @@
 .produtoCard .estoque{
   color: green;
 }
-.produtoCard h4{
-  font-weight: bold;
-}
 
-.header{
+.produtoCard .header{
   text-align: center;
+  height: 60px;
   background-color:rgb(127, 182, 255);
 }

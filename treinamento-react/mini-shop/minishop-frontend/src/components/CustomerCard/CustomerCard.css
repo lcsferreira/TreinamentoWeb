@@ -1,6 +1,23 @@
+h3.MuiTypography-body1 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+p.MuiTypography-body1 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
 .customer-card {
-    display: flex;
-    width: 400px;
-    background-color: #caf0f8;
-    border-radius: 8px;
+    width: 200px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-customers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }

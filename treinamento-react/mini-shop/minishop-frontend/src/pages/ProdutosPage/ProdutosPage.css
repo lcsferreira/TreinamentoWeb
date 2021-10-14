@@ -3,8 +3,42 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .listaProdutos__produtoCard{
   margin: 5px;
+}
+
+.paginacao{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cadastro{
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.page-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.uploadImagem{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  justify-content: flex-end;
+}
+
+.uploadImagem Button{
+  margin-left: 15px;
+}
+.uploadImagem Select{
+  margin-left: 15px;
 }

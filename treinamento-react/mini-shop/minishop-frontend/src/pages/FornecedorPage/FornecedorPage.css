@@ -1,0 +1,16 @@
+.listaFornecedor{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+.listaFornecedores__fornecedorCard{
+  margin: 5px
+}
+.paginacao .page-header-supplier{
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

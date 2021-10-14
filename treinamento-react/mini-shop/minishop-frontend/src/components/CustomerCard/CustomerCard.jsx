@@ -1,25 +1,22 @@
 import "./CustomerCard.css"
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import { Card, CardHeader } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import RemoveRedEyeIcon from '@material-ui/icons/RemoveRedEye';
+import { NavLink } from "react-router-dom";
 
 const CustomerCard = (props) => {
-    return ( 
+  return (
     <Card className="customer-card">
-      <CardActionArea>
-        <CardContent>
-          <div className="card-container">
-            <Typography component="h3">{props.customer.firstName}</Typography>
-            <Typography component="h3">{props.customer.lastName}</Typography>
-            <Typography component="p">{props.customer.city}</Typography>
-            <Typography component="p">{props.customer.country}</Typography>
-            <Typography component="p">{props.customer.phone}</Typography>
-          </div>
-        </CardContent>
-      </CardActionArea>
+
+      <CardHeader
+        title={props.customer.firstName}
+        subheader={props.customer.phone}
+      />
+      <Button component={NavLink} to={"/Cliente/" + props.customer.id} title="Detalhes">
+        <RemoveRedEyeIcon />
+      </Button>
     </Card>
-    );
+  );
 }
- 
+
 export default CustomerCard;

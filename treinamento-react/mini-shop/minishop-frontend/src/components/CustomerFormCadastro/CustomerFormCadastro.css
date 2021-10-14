@@ -1,0 +1,8 @@
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formCadastro > div {
+    margin: 7px 0;
+  }
