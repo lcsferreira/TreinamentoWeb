@@ -1,1 +1,0 @@
-Projeto foi passado como desafio em dupla, sendo feito no computador da empresa, por isso commits com pouca descrição.
